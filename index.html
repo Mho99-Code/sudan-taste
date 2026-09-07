@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>مذاق السودان | Sudan Taste</title>
-<style>
-    
+
+    <style>
         * {
             margin: 0;
             padding: 0;
@@ -21,10 +20,9 @@
             line-height: 1.6;
         }
 
-
         .navbar {
             background-color: #075062;
-            padding: 25px 20px;
+            padding: 20px 15px;
         }
 
         .nav-container {
@@ -34,7 +32,7 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 15px;
         }
 
         .logo {
@@ -46,7 +44,7 @@
         .nav-links {
             list-style: none;
             display: flex;
-            gap: 20px;
+            gap: 15px;
             flex-wrap: wrap;
         }
 
@@ -60,16 +58,15 @@
             text-decoration: underline;
         }
 
-        
         .hero {
             background-color: #fdf3f3;
             text-align: center;
-            padding: 60px 20px;
+            padding: 50px 20px;
             border-bottom: 1px solid #e0e0e0;
         }
 
         .hero h1 {
-            font-size: 28px;
+            font-size: 26px;
             margin-bottom: 14px;
             color: #222222;
         }
@@ -98,7 +95,7 @@
         .menu {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 50px 20px;
+            padding: 40px 20px;
         }
 
         .menu h2 {
@@ -116,7 +113,6 @@
             gap: 20px;
         }
 
-      
         .card {
             border: 1px solid #dddddd;
             border-radius: 6px;
@@ -147,10 +143,9 @@
             margin-top: auto;
         }
 
-      
         .about {
             background-color: #f9f9f9;
-            padding: 50px 20px;
+            padding: 40px 20px;
             border-top: 1px solid #e0e0e0;
             border-bottom: 1px solid #e0e0e0;
         }
@@ -175,11 +170,10 @@
             text-align: center;
         }
 
-
         .contact {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 50px 20px;
+            padding: 40px 20px;
         }
 
         .contact h2 {
@@ -217,6 +211,7 @@
             font-size: 14px;
         }
 
+        /* تعديلات الجوال والأجهزة الذكية */
         @media (max-width: 768px) {
             .menu-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -234,19 +229,30 @@
 
             .nav-container {
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: center;
+                text-align: center;
             }
 
             .nav-links {
+                justify-content: center;
                 gap: 12px;
             }
 
             .hero h1 {
                 font-size: 20px;
             }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .contact-info {
+                max-width: 100%;
+            }
         }
-        </style>
+    </style>
 </head>
+
 <body>
 
     <nav class="navbar">
@@ -260,7 +266,6 @@
             </ul>
         </div>
     </nav>
-
 
     <section class="hero" id="home">
         <h1>مرحبًا بك في مذاق السودان | Sudan Taste</h1>
@@ -371,21 +376,18 @@
         </div>
     </section>
 
-    
     <section class="about" id="about">
         <h2>عن المطعم</h2>
         <p>
-        
             مطعم سوداني عصري تأسس عام 2026، ويقدم تجربة مميزة تجمع بين أصالة المذاق السوداني ولمسات
             عصرية في التقديم.
             نحرص على اختيار أفضل المكونات الطازجة وإعداد أطباقنا بعناية لنقدم لعملائنا جودة عالية وطعمًا مميزًا في كل
-            زيارة
+            زيارة.
             يعمل فريقنا من الطهاة بشغف واهتمام لتقديم تجربة طعام تجمع بين الجودة، الأناقة، والضيافة السودانية الأصيلة.
             نرحب بالعائلات والأصدقاء للاستمتاع بأجواء هادئة ومريحة وتجربة طعام مميزة.
         </p>
     </section>
 
-    
     <section class="contact" id="contact">
         <h2>تواصل معنا</h2>
         <div class="contact-info">
