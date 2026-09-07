@@ -4,11 +4,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>مذاق السودان | Sudan Taste</title>
+<style>
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+
+        .navbar {
+            background-color: #075062;
+            padding: 25px 20px;
+        }
+
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .logo {
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        
+        .hero {
+            background-color: #fdf3f3;
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .hero h1 {
+            font-size: 28px;
+            margin-bottom: 14px;
+            color: #222222;
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: #555555;
+            max-width: 550px;
+            margin: 0 auto 24px auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #075062;
+            color: #ffffff;
+            padding: 10px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .btn:hover {
+            background-color: #000000;
+        }
+
+        .menu {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        .menu h2 {
+            font-size: 22px;
+            margin-bottom: 24px;
+            color: #222222;
+            border-bottom: 2px solid #075062;
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+      
+        .card {
+            border: 1px solid #dddddd;
+            border-radius: 6px;
+            padding: 18px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #222222;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #666666;
+            margin-bottom: 12px;
+        }
+
+        .price {
+            font-size: 15px;
+            font-weight: bold;
+            color: #075062;
+            margin-top: auto;
+        }
+
+      
+        .about {
+            background-color: #f9f9f9;
+            padding: 50px 20px;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .about h2 {
+            font-size: 22px;
+            margin-bottom: 16px;
+            color: #222222;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            border-bottom: 2px solid #075062;
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: 16px auto 0 auto;
+            font-size: 15px;
+            color: #555555;
+            text-align: center;
+        }
+
+
+        .contact {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        .contact h2 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #222222;
+            border-bottom: 2px solid #075062;
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+
+        .contact-info {
+            background-color: #f9f9f9;
+            border: 1px solid #dddddd;
+            border-radius: 6px;
+            padding: 20px;
+            max-width: 420px;
+        }
+
+        .contact-info p {
+            font-size: 15px;
+            margin-bottom: 10px;
+            color: #444444;
+        }
+
+        .contact-info p:last-child {
+            margin-bottom: 0;
+        }
+
+        .footer {
+            background-color: #075062;
+            color: #ffffff;
+            text-align: center;
+            padding: 16px 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .menu-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero h1 {
+                font-size: 22px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .hero h1 {
+                font-size: 20px;
+            }
+        }
+        </style>
 </head>
 <body>
-<!-- شريط التنقل -->
+
     <nav class="navbar">
         <div class="nav-container">
             <span class="logo">مذاق السودان | Sudan Taste</span>
@@ -21,14 +261,13 @@
         </div>
     </nav>
 
-    <!-- القسم الرئيسي -->
+
     <section class="hero" id="home">
         <h1>مرحبًا بك في مذاق السودان | Sudan Taste</h1>
         <p>مطعم سوداني بطابع عصري بسيط</p>
         <a href="#menu" class="btn">شاهد القائمة</a>
     </section>
 
-    <!-- قسم القائمة -->
     <section class="menu" id="menu">
         <h2>قائمة الطعام</h2>
         <div class="menu-grid">
@@ -132,7 +371,7 @@
         </div>
     </section>
 
-    <!-- قسم عن المطعم -->
+    
     <section class="about" id="about">
         <h2>عن المطعم</h2>
         <p>
@@ -146,7 +385,7 @@
         </p>
     </section>
 
-    <!-- قسم التواصل -->
+    
     <section class="contact" id="contact">
         <h2>تواصل معنا</h2>
         <div class="contact-info">
@@ -163,246 +402,3 @@
 </body>
 
 </html>
-<style>
-        /* إعادة ضبط بعض الأنماط الافتراضية */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
-            color: #333333;
-            line-height: 1.6;
-        }
-
-        /* شريط التنقل - Navbar */
-        .navbar {
-            background-color: #075062;
-            padding: 25px 20px;
-        }
-
-        .nav-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .logo {
-            color: rgb(255, 255, 255);
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .nav-links a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 15px;
-        }
-
-        .nav-links a:hover {
-            text-decoration: underline;
-        }
-
-        /* القسم الرئيسي - Hero */
-        .hero {
-            background-color: #fdf3f3;
-            text-align: center;
-            padding: 60px 20px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .hero h1 {
-            font-size: 28px;
-            margin-bottom: 14px;
-            color: #222222;
-        }
-
-        .hero p {
-            font-size: 16px;
-            color: #555555;
-            max-width: 550px;
-            margin: 0 auto 24px auto;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: #075062;
-            color: #ffffff;
-            padding: 10px 24px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 15px;
-        }
-
-        .btn:hover {
-            background-color: #000000;
-        }
-
-        /* قسم القائمة - Menu */
-        .menu {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 50px 20px;
-        }
-
-        .menu h2 {
-            font-size: 22px;
-            margin-bottom: 24px;
-            color: #222222;
-            border-bottom: 2px solid #075062;
-            padding-bottom: 8px;
-            display: inline-block;
-        }
-
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        /* الكارد - Card */
-        .card {
-            border: 1px solid #dddddd;
-            border-radius: 6px;
-            padding: 18px;
-            background-color: #ffffff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .card h3 {
-            font-size: 16px;
-            margin-bottom: 8px;
-            color: #222222;
-        }
-
-        .card p {
-            font-size: 14px;
-            color: #666666;
-            margin-bottom: 12px;
-        }
-
-        .price {
-            font-size: 15px;
-            font-weight: bold;
-            color: #075062;
-            margin-top: auto;
-        }
-
-        /* قسم عن المطعم - About */
-        .about {
-            background-color: #f9f9f9;
-            padding: 50px 20px;
-            border-top: 1px solid #e0e0e0;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .about h2 {
-            font-size: 22px;
-            margin-bottom: 16px;
-            color: #222222;
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
-            border-bottom: 2px solid #075062;
-            padding-bottom: 8px;
-            display: inline-block;
-        }
-
-        .about p {
-            max-width: 700px;
-            margin: 16px auto 0 auto;
-            font-size: 15px;
-            color: #555555;
-            text-align: center;
-        }
-
-        /* قسم التواصل - Contact */
-        .contact {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 50px 20px;
-        }
-
-        .contact h2 {
-            font-size: 22px;
-            margin-bottom: 20px;
-            color: #222222;
-            border-bottom: 2px solid #075062;
-            padding-bottom: 8px;
-            display: inline-block;
-        }
-
-        .contact-info {
-            background-color: #f9f9f9;
-            border: 1px solid #dddddd;
-            border-radius: 6px;
-            padding: 20px;
-            max-width: 420px;
-        }
-
-        .contact-info p {
-            font-size: 15px;
-            margin-bottom: 10px;
-            color: #444444;
-        }
-
-        .contact-info p:last-child {
-            margin-bottom: 0;
-        }
-
-        /* الفوتر - Footer */
-        .footer {
-            background-color: #075062;
-            color: #ffffff;
-            text-align: center;
-            padding: 16px 20px;
-            font-size: 14px;
-        }
-
-        /* Responsive - الهاتف والتابلت */
-        @media (max-width: 768px) {
-            .menu-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .hero h1 {
-                font-size: 22px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .menu-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .nav-container {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .nav-links {
-                gap: 12px;
-            }
-
-            .hero h1 {
-                font-size: 20px;
-            }
-        }
-        </style>
