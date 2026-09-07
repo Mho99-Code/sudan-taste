@@ -4,258 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مذاق السودان 
-        | Sudan Taste</title>
+    <title>مذاق السودان | Sudan Taste</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
-            color: #333333;
-            line-height: 1.6;
-        }
-
-        .navbar {
-            background-color: #075062;
-            padding: 20px 15px;
-        }
-
-        .nav-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .logo {
-            color: rgb(255, 255, 255);
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .nav-links a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 15px;
-        }
-
-        .nav-links a:hover {
-            text-decoration: underline;
-        }
-
-        .hero {
-            background-color: #fdf3f3;
-            text-align: center;
-            padding: 50px 20px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .hero h1 {
-            font-size: 26px;
-            margin-bottom: 14px;
-            color: #222222;
-        }
-
-        .hero p {
-            font-size: 16px;
-            color: #555555;
-            max-width: 550px;
-            margin: 0 auto 24px auto;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: #075062;
-            color: #ffffff;
-            padding: 10px 24px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 15px;
-        }
-
-        .btn:hover {
-            background-color: #000000;
-        }
-
-        .menu {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .menu h2 {
-            font-size: 22px;
-            margin-bottom: 24px;
-            color: #222222;
-            border-bottom: 2px solid #075062;
-            padding-bottom: 8px;
-            display: inline-block;
-        }
-
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .card {
-            border: 1px solid #dddddd;
-            border-radius: 6px;
-            padding: 18px;
-            background-color: #ffffff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .card h3 {
-            font-size: 16px;
-            margin-bottom: 8px;
-            color: #222222;
-        }
-
-        .card p {
-            font-size: 14px;
-            color: #666666;
-            margin-bottom: 12px;
-        }
-
-        .price {
-            font-size: 15px;
-            font-weight: bold;
-            color: #075062;
-            margin-top: auto;
-        }
-
-        .about {
-            background-color: #f9f9f9;
-            padding: 40px 20px;
-            border-top: 1px solid #e0e0e0;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .about h2 {
-            font-size: 22px;
-            margin-bottom: 16px;
-            color: #222222;
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
-            border-bottom: 2px solid #075062;
-            padding-bottom: 8px;
-            display: inline-block;
-        }
-
-        .about p {
-            max-width: 700px;
-            margin: 16px auto 0 auto;
-            font-size: 15px;
-            color: #555555;
-            text-align: center;
-        }
-
-        .contact {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .contact h2 {
-            font-size: 22px;
-            margin-bottom: 20px;
-            color: #222222;
-            border-bottom: 2px solid #075062;
-            padding-bottom: 8px;
-            display: inline-block;
-        }
-
-        .contact-info {
-            background-color: #f9f9f9;
-            border: 1px solid #dddddd;
-            border-radius: 6px;
-            padding: 20px;
-            max-width: 420px;
-        }
-
-        .contact-info p {
-            font-size: 15px;
-            margin-bottom: 10px;
-            color: #444444;
-        }
-
-        .contact-info p:last-child {
-            margin-bottom: 0;
-        }
-
-        .footer {
-            background-color: #075062;
-            color: #ffffff;
-            text-align: center;
-            padding: 16px 20px;
-            font-size: 14px;
-        }
-
-        /* تعديلات الجوال والأجهزة الذكية */
-        @media (max-width: 768px) {
-            .menu-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .hero h1 {
-                font-size: 22px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .menu-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .nav-container {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .nav-links {
-                justify-content: center;
-                gap: 12px;
-            }
-
-            .hero h1 {
-                font-size: 20px;
-            }
-
-            .hero p {
-                font-size: 14px;
-            }
-
-            .contact-info {
-                max-width: 100%;
-            }
-        }
-    </style>
 </head>
 
 <body>
-
+    <!-- شريط التنقل -->
     <nav class="navbar">
         <div class="nav-container">
             <span class="logo">مذاق السودان | Sudan Taste</span>
@@ -268,107 +22,130 @@
         </div>
     </nav>
 
+    <!-- القسم الرئيسي -->
     <section class="hero" id="home">
         <h1>مرحبًا بك في مذاق السودان | Sudan Taste</h1>
         <p>مطعم سوداني بطابع عصري بسيط</p>
         <a href="#menu" class="btn">شاهد القائمة</a>
     </section>
 
+    <!-- قسم القائمة -->
     <section class="menu" id="menu">
         <h2>قائمة الطعام</h2>
         <div class="menu-grid">
 
             <div class="card">
+
+                <img src="images/برجر لحم.avif" alt="برجر لحم">
                 <h3>برجر لحم</h3>
                 <p>برجر لذيذ مع الجبن والخضروات الطازجة والصوص الخاص.</p>
                 <span class="price">8.000 ج.س</span>
             </div>
 
             <div class="card">
+                <img src="images/بيتيزا .jpg" alt="بيتزا">
                 <h3>بيتزا</h3>
+
                 <p>بيتزا بالجبن الطازج مع الخضروات وصوص الطماطم.</p>
                 <span class="price">12.000 ج.س</span>
             </div>
 
             <div class="card">
+                <img src="images/اقاشي .jpg" alt="اقاشي ">
+
                 <h3>اقاشي</h3>
                 <p>اقاشي (فراخ, لحم)</p>
                 <span class="price">7.000 ج.س</span>
             </div>
 
             <div class="card">
+                <img src="images/فراخ مشوي .jpg" alt="فراخ">
+
                 <h3>فراخ مشوي</h3>
                 <p>فراخ طازج مشوي على الفحم</p>
                 <span class="price">25.000 ج.س</span>
             </div>
 
             <div class="card">
+                <img src="images/صوصات.jpg" alt="صوصات">
                 <h3>جميع انواع الصوصات</h3>
+
                 <p>كاتشب . توميه . بابكيو . المايونيز . الرانش . صوص الصوي .كول سلو</p>
                 <span class="price">5.000 ج.س</span>
             </div>
 
             <div class="card">
+                <img src="images/شاورما .jpg" alt="شاورما">
                 <h3>شاورما دجاج</h3>
                 <p>شاورما دجاج الطعم السوري الاصلي </p>
                 <span class="price">12.000 ج.س</span>
             </div>
 
             <div class="card">
+                <img src="images/قطع دجاج.jpg" alt="قطعةدجاح ">
                 <h3>ساندوتش زنجر</h3>
                 <p>ستريبس دجاج حار مع الجبنة</p>
                 <span class="price">12.000 ج.س</span>
             </div>
 
             <div class="card">
+                <img src="images/سندوتش كريسبي .jpg" alt="ساندوتش كريسبي">
                 <h3>ساندوتش كريسبي</h3>
                 <p>دجاج مقرمشة مع الخس والصوص</p>
                 <span class="price">12.999 ج.س</span>
             </div>
 
             <div class="card">
+                <img src="images/شيه .jpg" alt="شيه ">
                 <h3>وجبة الشياية السودانية</h3>
                 <p>شياية لحم + شطه + سلطة خضراء</p>
                 <span class="price">40.999 ج.س</span>
             </div>
 
             <div class="card">
+                <img src="images/وجبة اللمه .jpg" alt="وجبة اللمة">
                 <h3>وجبة اللمة</h3>
                 <p>قطعة دجاج كريسبي + بطاطس حجم عائلي + كول سلو + 4 صوصات + لتر بيبسي</p>
                 <span class="price">90.999 ج.س</span>
             </div>
 
             <div class="card">
+                <img src="images/شاورما عربي .jpg" alt="شاورما">
                 <h3>وجبة الشاورما العائلية الفردية (عربي)</h3>
                 <p>رول شاورما مقطع + بطاطس + مخلل + صوصات</p>
                 <span class="price">80.000 ج.س</span>
             </div>
 
             <div class="card">
+                <img src="images/برجر-اطفال-640x640.jpg" alt="البطل الصغير">
                 <h3>وجبة البطل الصغير</h3>
                 <p>برجر دجاج صغير + بطاطس + عصير أطفال + لعبة هدية</p>
                 <span class="price">10.000 ج.س</span>
             </div>
 
             <div class="card">
+                <img src="images/كيك الشوكولاتة.jpg" alt="كيك شوكولاتة">
                 <h3>كيك الشوكولاتة</h3>
                 <p>قطعة كيك شوكولاتة دافئة مع كريمة الفانيليا.</p>
                 <span class="price">15.000 ج.س</span>
             </div>
 
             <div class="card">
+                <img src="images/كنافة .jpg" alt="كنافة">
                 <h3>كنافة بالنوتيلا / القشطة</h3>
                 <p>كنافة مقرمشة محشوة بالقشطة البلدي أو الشوكولاتة</p>
                 <span class="price">15.000 ج.س</span>
             </div>
 
             <div class="card">
+                <img src="images/مولتن كبيك.jpeg" alt="مولتن كيك">
                 <h3>مولتن كيك (Volcano Cake)</h3>
                 <p>كيك الشوكولاتة الساخن المحشو بالشوكولاتة الذائبة مع أيس كريم فانيليا</p>
                 <span class="price">15.000 ج.س</span>
             </div>
 
             <div class="card">
+                <img src="images/تشيز كيك.jpg" alt="تشيزكيك ">
                 <h3>تشيز كيك لوتس</h3>
                 <p>طبقة من البسكويت الهش مع الكريمة الغنية وصوص التوت أو اللوتس</p>
                 <span class="price">15.000 ج.س</span>
@@ -377,18 +154,21 @@
         </div>
     </section>
 
+    <!-- قسم عن المطعم -->
     <section class="about" id="about">
         <h2>عن المطعم</h2>
         <p>
+
             مطعم سوداني عصري تأسس عام 2026، ويقدم تجربة مميزة تجمع بين أصالة المذاق السوداني ولمسات
             عصرية في التقديم.
             نحرص على اختيار أفضل المكونات الطازجة وإعداد أطباقنا بعناية لنقدم لعملائنا جودة عالية وطعمًا مميزًا في كل
-            زيارة.
+            زيارة
             يعمل فريقنا من الطهاة بشغف واهتمام لتقديم تجربة طعام تجمع بين الجودة، الأناقة، والضيافة السودانية الأصيلة.
             نرحب بالعائلات والأصدقاء للاستمتاع بأجواء هادئة ومريحة وتجربة طعام مميزة.
         </p>
     </section>
 
+    <!-- قسم التواصل -->
     <section class="contact" id="contact">
         <h2>تواصل معنا</h2>
         <div class="contact-info">
@@ -405,3 +185,253 @@
 </body>
 
 </html>
+<style>
+    /* إعادة ضبط بعض الأنماط الافتراضية */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+        color: #333333;
+        line-height: 1.6;
+    }
+
+    /* شريط التنقل - Navbar */
+    .navbar {
+        background-color: #075062;
+        padding: 25px 20px;
+    }
+
+    .nav-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .logo {
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 15px;
+    }
+
+    .nav-links a:hover {
+        text-decoration: underline;
+    }
+
+    /* القسم الرئيسي - Hero */
+    .hero {
+        background-color: #fdf3f3;
+        text-align: center;
+        padding: 60px 20px;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+        margin-bottom: 14px;
+        color: #222222;
+    }
+
+    .hero p {
+        font-size: 16px;
+        color: #555555;
+        max-width: 550px;
+        margin: 0 auto 24px auto;
+    }
+
+    .btn {
+        display: inline-block;
+        background-color: #075062;
+        color: #ffffff;
+        padding: 10px 24px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 15px;
+    }
+
+    .btn:hover {
+        background-color: #000000;
+    }
+
+    /* قسم القائمة - Menu */
+    .menu {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 50px 20px;
+    }
+
+    .menu h2 {
+        font-size: 22px;
+        margin-bottom: 24px;
+        color: #222222;
+        border-bottom: 2px solid #075062;
+        padding-bottom: 8px;
+        display: inline-block;
+    }
+
+    .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    /* الكارد - Card */
+    .card {
+        border: 1px solid #dddddd;
+        border-radius: 6px;
+        padding: 18px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+        color: #222222;
+    }
+
+    .card p {
+        font-size: 14px;
+        color: #666666;
+        margin-bottom: 12px;
+    }
+
+    .price {
+        font-size: 15px;
+        font-weight: bold;
+        color: #075062;
+        margin-top: auto;
+    }
+
+    /* قسم عن المطعم - About */
+    .about {
+        background-color: #f9f9f9;
+        padding: 50px 20px;
+        border-top: 1px solid #e0e0e0;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .about h2 {
+        font-size: 22px;
+        margin-bottom: 16px;
+        color: #222222;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom: 2px solid #075062;
+        padding-bottom: 8px;
+        display: inline-block;
+    }
+
+    .about p {
+        max-width: 700px;
+        margin: 16px auto 0 auto;
+        font-size: 15px;
+        color: #555555;
+        text-align: center;
+    }
+
+    /* قسم التواصل - Contact */
+    .contact {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 50px 20px;
+    }
+
+    .contact h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        color: #222222;
+        border-bottom: 2px solid #075062;
+        padding-bottom: 8px;
+        display: inline-block;
+    }
+
+    .contact-info {
+        background-color: #f9f9f9;
+        border: 1px solid #dddddd;
+        border-radius: 6px;
+        padding: 20px;
+        max-width: 420px;
+    }
+
+    .contact-info p {
+        font-size: 15px;
+        margin-bottom: 10px;
+        color: #444444;
+    }
+
+    .contact-info p:last-child {
+        margin-bottom: 0;
+    }
+
+    /* الفوتر - Footer */
+    .footer {
+        background-color: #075062;
+        color: #ffffff;
+        text-align: center;
+        padding: 16px 20px;
+        font-size: 14px;
+    }
+
+    /* Responsive - الهاتف والتابلت */
+    @media (max-width: 768px) {
+        .menu-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .hero h1 {
+            font-size: 22px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .menu-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .nav-container {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .nav-links {
+            gap: 12px;
+        }
+
+        .hero h1 {
+            font-size: 20px;
+        }
+    }
+    .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+</style>
