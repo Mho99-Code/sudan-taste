@@ -194,318 +194,215 @@
 
 </html>
           
-
-
 <style>
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+/* ===== أساسيات ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 
-    }
+body {
+    font-family: 'Trebuchet MS', Tahoma, Arial, sans-serif;
+    background-color: #dfddef;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
 
-    body {
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        background-color: #dfddef;
-        color: #333333;
-        line-height: 1.6;
-    }
+img { max-width: 100%; display: block; }
+section { scroll-margin-top: 10px; }
 
-    /* شريط التنقل - Navbar */
-    .navbar {
-        background: linear-gradient(135deg,
-                #163f70,
-                #2876b8,
-                #164b80);
+/* ===== شريط التنقل ===== */
+.navbar {
+    background: linear-gradient(135deg, #163f70, #2876b8, #164b80);
+    border-radius: 0 0 clamp(30px, 8vw, 95px) clamp(30px, 8vw, 95px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    padding: clamp(24px, 6vw, 70px) 20px;
+}
 
-        border-radius: 95px 95px 95px 95px;
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
 
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+.logo {
+    color: #fff;
+    font-size: clamp(20px, 5vw, 35px);
+    font-weight: bold;
+}
 
-        position: relative;
-        overflow: hidden;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 8px 22px;
+    flex-wrap: wrap;
+}
 
-        padding: 70px 20px;
-        text-decoration-color: #dddddd;
-        text-decoration-thickness: 1px;
+.nav-links a {
+    color: #fff;
+    font-size: clamp(16px, 4vw, 20px);
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 4px;           /* مساحة أكبر للّمس */
+}
+.nav-links a:hover { text-decoration: underline; }
 
-    }
+/* ===== القسم الرئيسي ===== */
+.hero {
+    text-align: center;
+    padding: clamp(36px, 8vw, 60px) 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.hero h1 {
+    font-size: clamp(22px, 6vw, 35px);
+    margin-bottom: 15px;
+    color: #000;
+    line-height: 1.4;
+}
+.hero p {
+    font-size: 16px;
+    color: #555;
+    max-width: 550px;
+    margin: 0 auto 24px;
+}
 
+.btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #163f70, #216094, #164b80);
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+}
+.btn:hover { background: #000; }
+
+/* ===== القائمة ===== */
+.menu {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 16px;
+}
+.menu h2, .contact h2 {
+    font-size: 22px;
+    margin-bottom: 24px;
+    color: #222;
+    border-bottom: 2px solid #075062;
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 16px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 14px;
+}
+.card h3 { font-size: 17px; margin-bottom: 8px; color: #222; }
+.card p  { font-size: 14px; color: #666; margin-bottom: 12px; }
+.price   { font-size: 16px; font-weight: bold; color: #075062; margin-top: auto; }
+
+/* ===== عن المطعم ===== */
+.about {
+    padding: 50px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about h2 {
+    font-size: 22px;
+    color: #000;
+    border-bottom: 2px solid #4a5bca;
+    padding-bottom: 8px;
+}
+.about p {
+    max-width: 1000px;
+    width: 100%;
+    margin: 16px auto 0;
+    background: linear-gradient(135deg, #163f70, #216094, #164b80);
+    padding: clamp(20px, 5vw, 40px);
+    border-radius: 25px;
+    font-size: 16px;
+    line-height: 2;
+    color: #e8e6e6;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== التواصل ===== */
+.contact {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 16px;
+}
+.contact-info {
+    background: linear-gradient(135deg, #163f70, #216094, #164b80);
+    border-radius: 25px;
+    padding: 24px;
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+.contact-info p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #f9f9f9;
+    overflow-wrap: anywhere;     /* يمنع خروج الإيميل الطويل من الشاشة */
+}
+.contact-info p:last-child { margin-bottom: 0; }
+
+/* ===== الفوتر ===== */
+.footer {
+    background: linear-gradient(135deg, #163f70, #2876b8, #164b80);
+    border-radius: clamp(30px, 8vw, 65px) clamp(30px, 8vw, 65px) 0 0;
+    color: #fff;
+    text-align: center;
+    padding: 18px 20px;
+    font-size: 14px;
+}
+
+/* ===== تابلت ===== */
+@media (max-width: 768px) {
+    .menu-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .card img  { height: 170px; }
+}
+
+/* ===== موبايل ===== */
+@media (max-width: 480px) {
     .nav-container {
-        max-width: 1000px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .logo {
-        text-decoration: none;
-        color: rgb(255, 255, 255);
-        font-size: 35px;
-        font-weight: bold;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
-
-    .nav-links {
-        list-style: none;
-        display: flex;
-        gap: 25px;
-        flex-wrap: wrap;
-    }
-
-    .nav-links a {
-        color: #ffffff;
-        font-size: 20px;
-    }
-
-    .nav-links a:hover {
-        text-decoration: underline;
-    }
-
-    /* القسم الرئيسي - Hero */
-    .hero {
-        background-color: #dfddef;
-        text-align: center;
-        padding: 60px 20px;
-        border-bottom: 1px solid #e0e0e0;
-    }
-
-    .hero h1 {
-        font-size: 35 px;
-        margin-bottom: 15px;
-        color: #000000;
-    }
-
-    .hero p {
-        font-size: 16px;
-        color: #555555;
-        max-width: 550px;
-        margin: 0 auto 24px auto;
-    }
-
-    .btn {
-        display: inline-block;
-        background: linear-gradient(135deg,
-                #163f70,
-                #216094,
-                #164b80);
-        color: #ffffff;
-        padding: 10px 24px;
-        border-radius: 4px;
-        text-decoration: none;
-        font-size: 15px;
-    }
-
-    .btn:hover {
-        background-color: #000000;
-    }
-
-    /* قسم القائمة - Menu */
-    .menu {
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 50px 20px;
-    }
-
-    .menu h2 {
-        font-size: 22px;
-        margin-bottom: 24px;
-        color: #222222;
-        border-bottom: 2px solid #075062;
-        padding-bottom: 8px;
-        display: inline-block;
-    }
-
-    .menu-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
-
-    /* الكارد - Card */
-    .card {
-        border: 1px solid #dddddd;
-        border-radius: 6px;
-        padding: 18px;
-        background-color: #ffffff;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .card h3 {
-        font-size: 16px;
-        margin-bottom: 8px;
-        color: #222222;
-    }
-
-    .card p {
-        font-size: 14px;
-        color: #666666;
-        margin-bottom: 12px;
-    }
-
-    .price {
-        font-size: 15px;
-        font-weight: bold;
-        color: #075062;
-        margin-top: auto;
-    }
-
-
-    /* قسم عن المطعم */
-    .about {
-        background-color: #dfddef;
-        padding: 60px 20px;
-
-        display: flex;
         flex-direction: column;
         align-items: center;
-    }
-
-    /* المربع الذي يحتوي الكلام */
-    .about p {
-        max-width: 1000px;
-        width: 90%;
-        margin: 16px auto 0;
-
-        background: linear-gradient(135deg, #163f70, #216094, #164b80);
-        padding: 40px;
-        border-radius: 25px;
-        font-size: 16px;
-        font-family: Arial, Helvetica, sans-serif;
-        line-height: 2;
-        color: #e8e6e6;
         text-align: center;
-
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     }
+    .nav-links { justify-content: center; }
 
-    /* العنوان */
-    .about h2 {
-        font-size: 22px;
-        color: #000000;
-        border-bottom: 2px solid #4a5bca;
-        padding-bottom: 8px;
-        margin: 0;
-    }
+    .menu-grid { grid-template-columns: 1fr; }
+    .card img  { height: 210px; }
 
-    /* قسم التواصل - Contact */
-    .contact {
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 50px 20px;
-
-    }
-
-    .contact h2 {
-        font-size: 22px;
-        margin-bottom: 20px;
-        color: #222222;
-        border-bottom: 2px solid #075062;
-        padding-bottom: 8px;
-        display: inline-block;
-    }
-
-    .contact-info {
-        background: linear-gradient(135deg, #163f70, #216094, #164b80);
-        padding: 40px;
-        border-radius: 25px;
-
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-        text-align: center;
-        border: 1px solid #dddddd;
-        border-radius: 25px;
-        padding: 22px;
-        max-width: 420px;
-    }
-
-    .contact-info p {
-        font-size: 15px;
-        margin-bottom: 10px;
-        color: #f9f9f9;
-
-    }
-
-    .contact-info p:last-child {
-        margin-bottom: 0;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /* الفوتر - Footer */
-    .footer {
-        background: linear-gradient(135deg,
-                #163f70,
-                #2876b8,
-                #164b80);
-        border-radius: 65px 65px 0px 0px;
-
-        box-shadow: 0 8px 250px rgba(0, 0, 0, 0.12);
-
-        position: relative;
-        overflow: hidden;
-        color: #ffffff;
-        text-align: center;
-        padding: 16px 20px;
-        font-size: 14px;
-
-    }
-
-    /* Responsive - الهاتف والتابلت */
-    @media (max-width: 768px) {
-        .menu-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .hero h1 {
-            font-size: 22px;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .menu-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .nav-container {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .nav-links {
-            gap: 12px;
-        }
-
-        .hero h1 {
-            font-size: 24px;
-        }
-    }
-
-    .card img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 6px;
-        margin-bottom: 15px;
-    }
-    </style>
+    .contact-info { max-width: 100%; }
+    .menu h2, .contact h2 { font-size: 20px; }
+}
+</style>
