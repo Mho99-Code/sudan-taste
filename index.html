@@ -13,7 +13,7 @@
 <meta property="og:image" content="https://mho99-code.github.io/sudan-taste/images/preview.jpg">
 <meta property="og:url" content="https://mho99-code.github.io/sudan-taste/">
     <title>مذاق السودان | Sudan Taste</title>
-
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -21,8 +21,8 @@
     <nav class="navbar">
         <div class="nav-container">
             <span class="logo">مذاق السودان | Sudan Taste</span>
-            <ul class="nav-links">
-                <li><a href="#home">الرئيسية</a></li>
+            <ul class="nav-links" >
+                <li><a href="#home">الرئيسية</a ></li>
                 <li><a href="#menu">القائمة</a></li>
                 <li><a href="#about">عن المطعم</a></li>
                 <li><a href="#contact">تواصل معنا</a></li>
@@ -32,7 +32,7 @@
 
     <!-- القسم الرئيسي -->
     <section class="hero" id="home">
-        <h1>مرحبًا بك في مذاق السودان | Sudan Taste</h1>
+        <h1 >مرحبًا بك في مذاق السودان | Sudan Taste</h1>
         <p>مطعم سوداني بطابع عصري بسيط</p>
         <a href="#menu" class="btn">شاهد القائمة</a>
     </section>
@@ -193,25 +193,45 @@
 </body>
 
 </html>
+          
+
+
 <style>
-    /* إعادة ضبط بعض الأنماط الافتراضية */
+
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
     }
 
     body {
-        font-family: Arial, sans-serif;
-        background-color: #ffffff;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        background-color: #dfddef;
         color: #333333;
         line-height: 1.6;
     }
 
     /* شريط التنقل - Navbar */
     .navbar {
-        background-color: #075062;
-        padding: 25px 20px;
+        background: linear-gradient(135deg,
+                #163f70,
+                #2876b8,
+                #164b80);
+
+        border-radius: 95px 95px 95px 95px;
+
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+        position: relative;
+        overflow: hidden;
+
+        padding: 70px 20px;
+        text-decoration-color: #dddddd;
+        text-decoration-thickness: 1px;
+
     }
 
     .nav-container {
@@ -225,22 +245,23 @@
     }
 
     .logo {
+        text-decoration: none;
         color: rgb(255, 255, 255);
-        font-size: 20px;
+        font-size: 35px;
         font-weight: bold;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
     .nav-links {
         list-style: none;
         display: flex;
-        gap: 20px;
+        gap: 25px;
         flex-wrap: wrap;
     }
 
     .nav-links a {
         color: #ffffff;
-        text-decoration: none;
-        font-size: 15px;
+        font-size: 20px;
     }
 
     .nav-links a:hover {
@@ -249,16 +270,16 @@
 
     /* القسم الرئيسي - Hero */
     .hero {
-        background-color: #fdf3f3;
+        background-color: #dfddef;
         text-align: center;
         padding: 60px 20px;
         border-bottom: 1px solid #e0e0e0;
     }
 
     .hero h1 {
-        font-size: 28px;
-        margin-bottom: 14px;
-        color: #222222;
+        font-size: 35 px;
+        margin-bottom: 15px;
+        color: #000000;
     }
 
     .hero p {
@@ -270,7 +291,10 @@
 
     .btn {
         display: inline-block;
-        background-color: #075062;
+        background: linear-gradient(135deg,
+                #163f70,
+                #216094,
+                #164b80);
         color: #ffffff;
         padding: 10px 24px;
         border-radius: 4px;
@@ -335,32 +359,42 @@
         margin-top: auto;
     }
 
-    /* قسم عن المطعم - About */
+
+    /* قسم عن المطعم */
     .about {
-        background-color: #f9f9f9;
-        padding: 50px 20px;
-        border-top: 1px solid #e0e0e0;
-        border-bottom: 1px solid #e0e0e0;
+        background-color: #dfddef;
+        padding: 60px 20px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
+    /* المربع الذي يحتوي الكلام */
+    .about p {
+        max-width: 1000px;
+        width: 90%;
+        margin: 16px auto 0;
+
+        background: linear-gradient(135deg, #163f70, #216094, #164b80);
+        padding: 40px;
+        border-radius: 25px;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 2;
+        color: #e8e6e6;
+        text-align: center;
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    /* العنوان */
     .about h2 {
         font-size: 22px;
-        margin-bottom: 16px;
-        color: #222222;
-        max-width: 1000px;
-        margin-left: auto;
-        margin-right: auto;
-        border-bottom: 2px solid #075062;
+        color: #000000;
+        border-bottom: 2px solid #4a5bca;
         padding-bottom: 8px;
-        display: inline-block;
-    }
-
-    .about p {
-        max-width: 700px;
-        margin: 16px auto 0 auto;
-        font-size: 15px;
-        color: #555555;
-        text-align: center;
+        margin: 0;
     }
 
     /* قسم التواصل - Contact */
@@ -368,6 +402,7 @@
         max-width: 1000px;
         margin: 0 auto;
         padding: 50px 20px;
+
     }
 
     .contact h2 {
@@ -380,30 +415,60 @@
     }
 
     .contact-info {
-        background-color: #f9f9f9;
+        background: linear-gradient(135deg, #163f70, #216094, #164b80);
+        padding: 40px;
+        border-radius: 25px;
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        text-align: center;
         border: 1px solid #dddddd;
-        border-radius: 6px;
-        padding: 20px;
+        border-radius: 25px;
+        padding: 22px;
         max-width: 420px;
     }
 
     .contact-info p {
         font-size: 15px;
         margin-bottom: 10px;
-        color: #444444;
+        color: #f9f9f9;
+
     }
 
     .contact-info p:last-child {
         margin-bottom: 0;
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /* الفوتر - Footer */
     .footer {
-        background-color: #075062;
+        background: linear-gradient(135deg,
+                #163f70,
+                #2876b8,
+                #164b80);
+        border-radius: 65px 65px 0px 0px;
+
+        box-shadow: 0 8px 250px rgba(0, 0, 0, 0.12);
+
+        position: relative;
+        overflow: hidden;
         color: #ffffff;
         text-align: center;
         padding: 16px 20px;
         font-size: 14px;
+
     }
 
     /* Responsive - الهاتف والتابلت */
@@ -432,14 +497,15 @@
         }
 
         .hero h1 {
-            font-size: 20px;
+            font-size: 24px;
         }
     }
+
     .card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 6px;
-    margin-bottom: 15px;
-}
-</style>
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 6px;
+        margin-bottom: 15px;
+    }
+    </style>
